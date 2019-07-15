@@ -1,0 +1,65 @@
+## -*- Makefile -*-
+##
+## Project: /home/thompson/Yan/wilcox/wilcox.prd
+## User: thompson
+## Time: 04/04/06 13:08:10
+## Makefile created by Sun WorkShop.
+##
+## This file is generated automatically -- DO NOT EDIT.
+##
+
+
+
+project: wilcox.test 
+
+##### Compilers and tools definitions shared by all build objects #####
+CC=gcc
+CFLAGS=-O3 
+
+
+###### Target: wilcox.test ######
+TARGETDIR_WILCOX.TEST=.
+CPPFLAGS_WILCOX.TEST =
+
+OBJS_WILCOX.TEST = \
+	$(TARGETDIR_WILCOX.TEST)/datainput.o \
+	$(TARGETDIR_WILCOX.TEST)/pexact.o \
+	$(TARGETDIR_WILCOX.TEST)/pnormal.o \
+	$(TARGETDIR_WILCOX.TEST)/ranking.o \
+	$(TARGETDIR_WILCOX.TEST)/sort.o \
+	$(TARGETDIR_WILCOX.TEST)/wilcox.o 
+
+
+# Link or archive
+wilcox.test: $(OBJS_WILCOX.TEST) 
+	$(LINK.c)  $(CFLAGS_WILCOX.TEST) $(CPPFLAGS_WILCOX.TEST) -owilcox.test $(OBJS_WILCOX.TEST) -lm 
+
+
+# Compile source files into .o's
+	$(COMPILE.c) $(CFLAGS_WILCOX.TEST) $(CPPFLAGS_WILCOX.TEST) -o $(TARGETDIR_WILCOX.TEST)/datainput.o /mnt/c/Users/Bill/BioComp/gibbs/src/wilcox/datainput.c
+$(TARGETDIR_WILCOX.TEST)/pexact.o: /mnt/c/Users/Bill/BioComp/gibbs/src/wilcox/pexact.c
+	$(COMPILE.c) $(CFLAGS_WILCOX.TEST) $(CPPFLAGS_WILCOX.TEST) -o $(TARGETDIR_WILCOX.TEST)/pexact.o /mnt/c/Users/Bill/BioComp/gibbs/src/wilcox/pexact.c
+$(TARGETDIR_WILCOX.TEST)/pnormal.o: /mnt/c/Users/Bill/BioComp/gibbs/src/wilcox/pnormal.c
+	$(COMPILE.c) $(CFLAGS_WILCOX.TEST) $(CPPFLAGS_WILCOX.TEST) -o $(TARGETDIR_WILCOX.TEST)/pnormal.o /mnt/c/Users/Bill/BioComp/gibbs/src/wilcox/pnormal.c
+$(TARGETDIR_WILCOX.TEST)/ranking.o: /mnt/c/Users/Bill/BioComp/gibbs/src/wilcox/ranking.c
+	$(COMPILE.c) $(CFLAGS_WILCOX.TEST) $(CPPFLAGS_WILCOX.TEST) -o $(TARGETDIR_WILCOX.TEST)/ranking.o /mnt/c/Users/Bill/BioComp/gibbs/src/wilcox/ranking.c
+$(TARGETDIR_WILCOX.TEST)/sort.o: /mnt/c/Users/Bill/BioComp/gibbs/src/wilcox/sort.c
+	$(COMPILE.c) $(CFLAGS_WILCOX.TEST) $(CPPFLAGS_WILCOX.TEST) -o $(TARGETDIR_WILCOX.TEST)/sort.o /mnt/c/Users/Bill/BioComp/gibbs/src/wilcox/sort.c
+$(TARGETDIR_WILCOX.TEST)/wilcox.o: /mnt/c/Users/Bill/BioComp/gibbs/src/wilcox/wilcox.c
+	$(COMPILE.c) $(CFLAGS_WILCOX.TEST) $(CPPFLAGS_WILCOX.TEST) -o $(TARGETDIR_WILCOX.TEST)/wilcox.o /mnt/c/Users/Bill/BioComp/gibbs/src/wilcox/wilcox.c
+
+
+###### clean target: deletes generated files ######
+clean:
+	$(RM) \
+	output/wilcox.test \
+	$(TARGETDIR_WILCOX.TEST)/datainput.o \
+	$(TARGETDIR_WILCOX.TEST)/pexact.o \
+	$(TARGETDIR_WILCOX.TEST)/pnormal.o \
+	$(TARGETDIR_WILCOX.TEST)/ranking.o \
+	$(TARGETDIR_WILCOX.TEST)/sort.o \
+	$(TARGETDIR_WILCOX.TEST)/wilcox.o 
+
+# Enable dependency checking
+.KEEP_STATE:
+.KEEP_STATE_FILE: /mnt/c/Users/Bill/BioComp/gibbs/src/wilcox/.make.state.Makefile.thompson.wilcox
